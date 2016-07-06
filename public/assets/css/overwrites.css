@@ -1,0 +1,99 @@
+body, html{
+	height: 100%;
+}
+
+body{
+	background: url('/assets/img/tr-bg.jpg');
+	background-size: cover;
+  font-family: 'Abel', sans-serif, Helvetica, Arial !important;
+}
+
+@media(min-width: 1024px){
+	.navbar-default {
+	  background-color: transparent;
+	  border-color: transparent !important;
+	  margin-top: 1.5em;
+	}
+}
+
+@media (min-width: 1200px){
+	.container {
+    width: 1032px;
+	}
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #5bac29;
+}
+
+.logo{
+	height: 100%;
+}
+
+.corner{
+	position: absolute;
+	min-width: 6em;
+}
+
+.black-corner{
+  top: 0px;
+  left: 0px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 32em 7.5em 0 0;
+  border-color: #000000 transparent transparent transparent;
+}
+
+.green-corner{
+	bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 32em 7.5em;
+  border-color: transparent transparent #5bac29 transparent;
+}
+
+/* Textos */
+
+.main-title{
+  display: inline-block;
+  border-bottom: solid #5bac29 2px;
+  padding-bottom: 0.2em;
+}
+
+/* Botones */
+
+.btn-link-mod{
+  color: white !important;
+  background: #5bac29;
+  padding: 0.5em 1em 0.5em 1em;
+  font-size: 1.1em;
+  width: 7em;
+  border: none;
+  margin-top: 0.5em;
+}
+
+.btn-link-mod > a{
+  color: white !important;
+}
+
+/* Contenedores */
+
+.panel-default {
+  border-color: #5bac29;
+}
+
+.inner-text{
+  max-width: 22em;
+  display: inline-block;
+  font-size: 1.4em;
+}
+
+/* Formularios */
+
+.form-control{
+  border: 1px solid #5bac29;
+  border-radius: 0px;
+}
