@@ -19,6 +19,7 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/resume', 'ResumeController@index');
 
 /*
 |--------------------------------------------------------------------------
