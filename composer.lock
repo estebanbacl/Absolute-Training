@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9e8d3ec2969ab1b6320c259b070a5bc9",
-    "content-hash": "4b726d917bf454f646875e5983094e31",
+    "hash": "c36ebb62d84d845987ff1ec37dc0a133",
+    "content-hash": "7741026831a92a84a7df9e5c675434fe",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -605,6 +605,53 @@
                 "templates"
             ],
             "time": "2016-07-02 13:04:25"
+        },
+        {
+            "name": "infyomlabs/generator-builder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/InfyOmLabs/generator-builder.git",
+                "reference": "41c6c0a74e85c2e1cd60449ea5304ced9e31c8ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/InfyOmLabs/generator-builder/zipball/41c6c0a74e85c2e1cd60449ea5304ced9e31c8ea",
+                "reference": "41c6c0a74e85c2e1cd60449ea5304ced9e31c8ea",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "InfyOm\\GeneratorBuilder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mitul Golakiya",
+                    "email": "me@mitul.me"
+                }
+            ],
+            "description": "InfyOm Laravel Generator GUI Builder",
+            "keywords": [
+                "api",
+                "builder",
+                "crud",
+                "generator",
+                "gui",
+                "interface",
+                "laravel",
+                "view"
+            ],
+            "time": "2016-05-19 18:48:27"
         },
         {
             "name": "infyomlabs/laravel-generator",
@@ -3997,7 +4044,8 @@
         "infyomlabs/laravel-generator": 20,
         "infyomlabs/core-templates": 20,
         "infyomlabs/swagger-generator": 20,
-        "jlapp/swaggervel": 20
+        "jlapp/swaggervel": 20,
+        "infyomlabs/generator-builder": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

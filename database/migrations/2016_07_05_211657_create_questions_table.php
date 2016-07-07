@@ -17,8 +17,11 @@ class CreateQuestionsTable extends Migration
             $table->string('questions_es');
             $table->string('questions_en');
             $table->enum('type', ['1', '2', '3']);
-            $table->boolean('state');
-            $table->date('created_at');
+            $table->boolean('state')->default(true);
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
+            $table->dateTime('deleted_at')->nullable();
+            
         });
     }
 

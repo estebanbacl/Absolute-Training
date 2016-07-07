@@ -7,8 +7,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @SWG\Definition(
- *      definition="questions",
+ *      definition="answers",
  *      required={},
+ *      @SWG\Property(
+ *          property="answers_id",
+ *          description="answers_id",
+ *          type="integer",
+ *          format="int32"
+ *      ),
  *      @SWG\Property(
  *          property="questions_id",
  *          description="questions_id",
@@ -16,32 +22,33 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *          format="int32"
  *      ),
  *      @SWG\Property(
- *          property="questions_es",
- *          description="questions_es",
+ *          property="answer_es",
+ *          description="answer_es",
  *          type="string"
  *      ),
  *      @SWG\Property(
- *          property="questions_en",
- *          description="questions_en",
+ *          property="answer_en",
+ *          description="answer_en",
  *          type="string"
  *      ),
  *      @SWG\Property(
- *          property="type",
- *          description="type",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="state",
- *          description="state",
+ *          property="response",
+ *          description="response",
  *          type="boolean"
+ *      ),
+ *      @SWG\Property(
+ *          property="rel_response",
+ *          description="rel_response",
+ *          type="integer",
+ *          format="int32"
  *      )
  * )
  */
-class questions extends Model
+class answers extends Model
 {
     use SoftDeletes;
 
-    public $table = 'questions';
+    public $table = 'answers';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -49,13 +56,14 @@ class questions extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $primaryKey = 'questions_id';
+    protected $primaryKey = 'answers_id';
 
     public $fillable = [
-        'questions_es',
-        'questions_en',
-        'type',
-        'state',
+        'questions_id',
+        'answer_es',
+        'answer_en',
+        'response',
+        'rel_response',
         'deleted_at'
     ];
 
@@ -65,11 +73,12 @@ class questions extends Model
      * @var array
      */
     protected $casts = [
+        'answers_id' => 'integer',
         'questions_id' => 'integer',
-        'questions_es' => 'string',
-        'questions_en' => 'string',
-        'type' => 'string',
-        'state' => 'boolean',
+        'answer_es' => 'string',
+        'answer_en' => 'string',
+        'response' => 'boolean',
+        'rel_response' => 'integer',
         'deleted_at' => 'datetime'
     ];
 

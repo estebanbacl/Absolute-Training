@@ -46,7 +46,9 @@ trait MakequestionsTrait
             'questions_en' => $fake->word,
             'type' => $fake->word,
             'state' => $fake->word,
-            'created_at' => $fake->word
+            'created_at' => $fake->word,
+            'updated_at' => $fake->word,
+            'deleted_at' => $fake->word
         ], $questionsFields);
     }
 }
