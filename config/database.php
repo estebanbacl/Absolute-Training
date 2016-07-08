@@ -1,6 +1,5 @@
 <?php
 
-
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 $host = $url["host"];
@@ -52,8 +51,6 @@ return [
     |
     */
 
-
-
     'connections' => [
 
         'sqlite' => [
@@ -64,13 +61,13 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => $host,
-           // 'port' => env('DB_PORT', '3306'),
-            'database' => $database,
-            'username' => $username,
-            'password' => $password,
+            'host' => env('DB_HOST', 'localhost'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             //'unix_socket'   => '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock', // XAMPP
-            //'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock', // MAMP
+            'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock', // MAMP
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',

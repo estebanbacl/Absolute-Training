@@ -27,7 +27,7 @@ class questionsAPIController extends InfyOmBaseController
     {
         $this->questionsRepository = $questionsRepo;
     }
-
+    
     /**
      * @param Request $request
      * @return Response
@@ -68,6 +68,7 @@ class questionsAPIController extends InfyOmBaseController
 
         return $this->sendResponse($questions->toArray(), 'questions retrieved successfully');
     }
+
 
     /**
      * @param CreatequestionsAPIRequest $request

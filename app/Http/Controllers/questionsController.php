@@ -22,6 +22,7 @@ class questionsController extends InfyOmBaseController
         $this->questionsRepository = $questionsRepo;
     }
 
+
     /**
      * Display a listing of the questions.
      *
