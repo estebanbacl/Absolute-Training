@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -32,7 +31,6 @@ Route::group(['prefix' => 'api', 'namespace' => 'API'], function () {
         require config('infyom.laravel_generator.path.api_routes');
     });
 });
-
 
 Route::get('generator_builder', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@builder');
 
