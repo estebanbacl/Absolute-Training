@@ -7,7 +7,7 @@
     <!-- Styles -->
     <style>
         .certificado{
-            background: url('http://morning-garden-22070.herokuapp.com/assets/img/tr-bg.jpg');
+            background: url('http://morning-garden-22070.herokuapp.com/assets/img/certificado.jpg');
             background-size: cover;
             width: 100%;
             height: 100%;
