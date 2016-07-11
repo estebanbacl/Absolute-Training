@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d30db485deb5f4d6989b710327b43243",
-    "content-hash": "56fe706a8a453253fb2da60fde537e1a",
+    "hash": "d529efda1db734842a940e8aad13d270",
+    "content-hash": "e16f53548bfd478b99022fa0c9144846",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -1026,16 +1026,16 @@
         },
         {
             "name": "laracasts/flash",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laracasts/flash.git",
-                "reference": "4df7200127a71511bdf116bc8b7a2586612c7a35"
+                "reference": "03eec812fd6ae948664ff51b4320785f6d15ee5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laracasts/flash/zipball/4df7200127a71511bdf116bc8b7a2586612c7a35",
-                "reference": "4df7200127a71511bdf116bc8b7a2586612c7a35",
+                "url": "https://api.github.com/repos/laracasts/flash/zipball/03eec812fd6ae948664ff51b4320785f6d15ee5d",
+                "reference": "03eec812fd6ae948664ff51b4320785f6d15ee5d",
                 "shasum": ""
             },
             "require": {
@@ -1065,7 +1065,7 @@
                 }
             ],
             "description": "Easy flash notifications",
-            "time": "2016-03-14 15:55:34"
+            "time": "2016-07-11 20:46:02"
         },
         {
             "name": "laravel/framework",
@@ -4173,7 +4173,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.5.9"
+        "php": ">=5.5.9",
+        "ext-gd": "*"
     },
     "platform-dev": []
 }
