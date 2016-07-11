@@ -66,7 +66,7 @@ class questionsAPIController extends InfyOmBaseController
         $this->questionsRepository->pushCriteria(new LimitOffsetCriteria($request));
         $questions = $this->questionsRepository->all();
 
-        return $this->sendResponse($questions->toArray(), 'questions retrieved successfully');
+        return $this->sendResponse($questions->toArray(), 'successfully');
     }
 
 

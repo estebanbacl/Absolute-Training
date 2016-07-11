@@ -6,22 +6,32 @@ var app = angular.module('training', [], function($interpolateProvider) {
 
 app.controller('trainingController', function($scope, $http) {
 
-    $scope.todos = [];
+    $scope.questions = [];
+    $scope.answers = [];
     $scope.loading = false;
 
     $scope.init = function() {
         $scope.loading = true;
-        $http.get('/api/v1/questions/2').
-        success(function(data, status, headers, config) {
-            $scope.questions = data;
-            $scope.loading = false;
-            console.log(data);
+        $http.get('/api/v1/questions').
+        success(function(data) {
+            $scope.questions = data.data;
+            console.log($scope.questions);
 
-           console.log(data);
+            questions(2);
+        });
+    }
+
+    $scope.questions = function (id) {
+        $scope.loading = true;
+        $http.get('/api/v1/questions/id').
+        success(function(data) {
+            console.log('Answers : ');
+            $scope.answers = data.data;
+            console.log($scope.answers);
         });
     }
 
     $scope.init();
+
 });
 
-    console.log("APP.JS");
