@@ -12,15 +12,5 @@
 
 Route::resource('questions', 'questionsAPIController');
 
-
 Route::resource('answers', 'answersAPIController');
 
-Route::resource('questions', 'questionsAPIController');
-
-Route::resource('questions', 'questionsAPIController');
-
-Route::resource('answers', 'answersAPIController');
-
-Route::resource('questions', 'questionsAPIController');
-
-Route::resource('answers', 'answersAPIController');

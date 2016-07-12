@@ -10,7 +10,8 @@ use App\Repositories\questionsRepository;
 use InfyOm\Generator\Criteria\LimitOffsetCriteria;
 use InfyOm\Generator\Utils\ResponseUtil;
 use Prettus\Repository\Criteria\RequestCriteria;
-use Response;
+use Illuminate\Support\Facades\DB;
+use Controller;
 
 class HomeController extends Controller
 {
@@ -29,8 +30,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-
         return view('home');
-
     }
 }
