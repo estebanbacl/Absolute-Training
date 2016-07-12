@@ -35,6 +35,6 @@
     </div>
 
     <button class="btn-link-mod" style="width: 150px;">
-        <a href="/resume">Siguiente Pregunta</a>
+        <a ng-click="nextQuestions()">Siguiente Pregunta</a>
     </button>
 </div>

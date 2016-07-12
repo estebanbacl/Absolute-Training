@@ -17,11 +17,11 @@ app.controller('trainingController', function($scope, $http) {
         $http.get('/api/v1/questions').
         success(function(data) {
             $scope.questions = data.data;
-            console.log('Count Question :'+$scope.questions.length);
         });
     }
 
     $scope.questionsId = function (id) {
+        $scope.question = '';
         $scope.loading = true;
         $http.get('/api/v1/questions/'+id).
         success(function(data) {
@@ -29,33 +29,29 @@ app.controller('trainingController', function($scope, $http) {
         });
     }
 
-    $scope.answers = function (id) {
+    $scope.answersId = function (id) {
+        $scope.answers_ID = [];
         $scope.loading = true;
         $http.get('/api/v1/answers/').
         success(function(data) {
             $scope.answers = data.data;
-
-            console.log('ANSWERS : ');
-
             for( var i in $scope.answers ){
-
-                console.log($scope.answers[i].questions_id);
                 if ($scope.answers[i].questions_id == id ) {
                     $scope.answers_ID.push($scope.answers[i]);
                 }
             }
-            
-            console.log($scope.answers_ID);
-
-
         });
+    }
+
+    $scope.nextQuestions = function() {
+        console.log('NextQuestion');
+        $scope.questionsId(1);
+        $scope.answersId(1);
     }
 
     $scope.questions();
     $scope.questionsId(2);
-
-    $scope.answers(2);
-
+    $scope.answersId(2);
 
 });
 
