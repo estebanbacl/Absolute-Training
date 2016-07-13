@@ -61,13 +61,13 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-/*
+
             'host' => $host,
             'database' => $database,
             'username' => $username,
             'password' => $password,
-
-*/
+            
+            /*
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'forge'),
@@ -75,7 +75,7 @@ return [
             'password' => env('DB_PASSWORD', ''),
             //'unix_socket'   => '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock', // XAMPP
             'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock', // MAMP
-
+            */
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
