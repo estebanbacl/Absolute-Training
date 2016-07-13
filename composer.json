@@ -15,6 +15,7 @@
         "doctrine/dbal": "~2.3",
         "infyomlabs/generator-builder": "dev-master",
         "barryvdh/laravel-dompdf": "0.6.*",
+        "guzzlehttp/guzzle": "~4.0",
         "ext-gd": "*"
     },
     "require-dev": {
