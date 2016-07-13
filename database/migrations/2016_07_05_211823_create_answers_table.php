@@ -19,6 +19,7 @@ class CreateAnswersTable extends Migration
             $table->string('answer_es');
             $table->string('answer_en');
             $table->boolean('response');
+            $table->string('rel_column');
             $table->integer('rel_response');
             $table->dateTime('created_at');
             $table->dateTime('updated_at');
