@@ -17,14 +17,13 @@
     {!! Form::select('response', array('0' => 'No', '1' => 'Si' ), ['class' => 'form-control']) !!}
 </div>
 
-<!-- Rel Response Field
+<!-- Rel Response Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('rel_response', 'Respuesta Relacionada, solo tipo otros. ') !!}
     {!! Form::number('rel_response', null, ['class' => 'form-control']) !!}
 </div>
 
-
-<!-- Rel Response Field -->
+<!-- Rel Response Field
 <div class="form-group col-sm-6">
     {!! Form::label('rel_response', 'Respuesta Relacionada, solo tipo otros. ') !!}
     <select>
@@ -35,7 +34,7 @@
         ?>
     </select>
 </div>
-
+ -->
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">

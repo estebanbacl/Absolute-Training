@@ -12,15 +12,19 @@ app.controller('trainingController', function($scope, $http) {
     $scope.answers_ID = [];
     $scope.loading = false;
 
-    $scope.questions = function() {
+    $scope.questionsAll = function() {
         $scope.loading = true;
         $http.get('/api/v1/questions').
         success(function(data) {
             $scope.questions = data.data;
+            $scope.questionsId($scope.questions[0].questions_id);
+            $scope.answersId($scope.questions[0].questions_id);
         });
+        return $scope.questions;
     }
 
     $scope.questionsId = function (id) {
+        console.log(id);
         $scope.question = '';
         $scope.loading = true;
         $http.get('/api/v1/questions/'+id).
@@ -43,15 +47,23 @@ app.controller('trainingController', function($scope, $http) {
         });
     }
 
+    var count = 1;
     $scope.nextQuestions = function() {
-        console.log('NextQuestion');
-        $scope.questionsId(1);
-        $scope.answersId(1);
+
+        if($scope.questions.length > count ){
+            console.log('NextQuestion');
+            console.log(count);
+            $scope.questionsId($scope.questions[count].questions_id);
+            $scope.answersId($scope.questions[count].questions_id);
+            count = count+1;
+        }else{
+            console.log('Fin de las preguntas');
+        }
+
     }
 
-    $scope.questions();
-    $scope.questionsId(2);
-    $scope.answersId(2);
+    $scope.questionsAll();
+
 
 });
 
