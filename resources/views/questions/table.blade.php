@@ -1,5 +1,6 @@
 <table class="table table-responsive" id="questions-table">
     <thead>
+        <th>Id Pregunta </th>
         <th>Pregunta </th>
         <th>Tipo</th>
         <th>Estado</th>
@@ -10,8 +11,8 @@
     <tbody>
     @foreach($questions as $questions)
         <tr>
+            <td>{!! $questions->questions_id !!} </td>
             <td>{!! $questions->questions_es !!} </td>
-
             <td>{!! $questions->type !!}</td>
             <td>{!! $questions->state !!}</td>
             <td>{!! $questions->created_at !!}</td>
